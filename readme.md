@@ -29,6 +29,18 @@ DEBUG=True)
 
 # 배포
     1. 헤로쿠 가입
+    2. heroku CLI 다운 & 설치
+    3. $ heroku 
+        $ heroku login
+        $ heroku create [이름]
+        $ git remote -v
+    4. heroku config:set DEBUG=True
+    5. heroku config:set 시크릿키 복붙 ==> 오류
+        + 웹에서 대시보드 settings에서 등록 가능
+
+    5. git add .
+    6. git commit -m 'deploy heroku'
+    7. git push heroku master
     
 
 
