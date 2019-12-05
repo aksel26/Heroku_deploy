@@ -41,7 +41,10 @@ DEBUG=True)
     5. git add .
     6. git commit -m 'deploy heroku'
     7. git push heroku master
-    
+    8. $ heroku run python manage.py migrate ==> 오류
+        대시보드 more=> console => bash
+        입력
+    9. $ heroku open
 
 
 

@@ -3,7 +3,8 @@ from .models import Movie
 import csv
 from datetime import datetime
 from django.urls import resolve
-
+from django.conf import settings
+import os
 # Create your views here.
 
 
@@ -11,7 +12,7 @@ def index(request):
     movie = Movie.objects.all()
       
     if len(movie) == 0:
-        with open('C://data.csv', 'r', encoding='utf-8-sig') as csv_file:
+        with open(os.path.join(settings.BASE_DIR,'movie','data.csv'), 'r', encoding='utf-8-sig') as csv_file:
             # csv 파일을 Dictionary 형식으로 읽어옴.
             csv_data = csv.DictReader(csv_file, delimiter=",")
             for data in csv_data:
